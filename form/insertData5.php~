@@ -1,0 +1,57 @@
+<?php
+include ('../function/database.php');
+
+$indexuser=$_GET['indexuser'];
+
+$tujuhbelasI =$_GET['tujuhbelas'];
+
+$delapanbelasI =$_GET['delapanbelas'];
+
+$sembilanbelasI =$_GET['delapanbelas'];
+
+
+foreach ($tujuhbelasI as $key => $valuev)
+{
+	$bobot1 = $valuev * 0.5;
+}
+
+
+foreach ($delapanbelasI as $key => $valuev)
+{
+	$bobot2 = $valuev * 0.5;
+}
+
+
+if (empty($sembilanbelasI))
+{
+	$
+
+foreach ($sembilanbelasI as $key => $valuev)
+{
+	$bobot3 = $valuev * 1;
+	if ($sembilanbelasI[0] == 1 and $sembilanbelasI[1] ==2 )
+	{
+		$bobot3=4;
+	}
+	else if ($sembilanbelasI[0] == 1) 
+	{
+		$bobot3=3;
+	}
+	
+	else if ($sembilanbelasI[0] == 2) 
+	{
+		$bobot3=2;
+	}
+
+
+}
+$sumtotal = $bobot1 + $bobot2 + $bobot3;
+
+
+$sql= insertSql5($indexuser,$sumtotal);
+
+?>
+
+
+
+

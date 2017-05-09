@@ -1,0 +1,21 @@
+<?php
+
+
+include ('../function/database.php');
+$index= $_GET['indexvariable'];
+
+$limabelasI= $_GET['limabelasI'];
+
+$limabelasII= $_GET['limabelas1I'];
+
+$enambelas= $_GET['enambelas'];
+
+$count = $limabelasI * 0.5;
+
+$count1 = $limabelasII * 0.5;
+
+$sumtotal= $count+ $count1 +$enambelas;
+
+
+$query= insertSql4 ($index,$sumtotal);
+?>

@@ -1,0 +1,49 @@
+[23-Aug-2016 15:57:35 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/ypiisema/public_html/supervisi/form/cekdata/cek.php on line 360
+[23-Aug-2016 16:09:09 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/ypiisema/public_html/supervisi/form/cekdata/cek.php on line 33
+[23-Aug-2016 16:09:09 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ypiisema/public_html/supervisi/form/cekdata/cek.php on line 197
+[23-Aug-2016 16:09:37 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/ypiisema/public_html/supervisi/form/cekdata/cek.php on line 33
+[23-Aug-2016 16:09:37 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ypiisema/public_html/supervisi/form/cekdata/cek.php on line 197
+[23-Aug-2016 16:11:53 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/ypiisema/public_html/supervisi/form/cekdata/cek.php on line 33
+[23-Aug-2016 16:11:53 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ypiisema/public_html/supervisi/form/cekdata/cek.php on line 197
+[23-Aug-2016 16:12:11 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/ypiisema/public_html/supervisi/form/cekdata/cek.php on line 33
+[23-Aug-2016 16:12:11 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ypiisema/public_html/supervisi/form/cekdata/cek.php on line 197
+[23-Aug-2016 16:12:15 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/ypiisema/public_html/supervisi/form/cekdata/cek.php on line 33
+[23-Aug-2016 16:12:15 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ypiisema/public_html/supervisi/form/cekdata/cek.php on line 197
+[23-Aug-2016 16:12:36 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/ypiisema/public_html/supervisi/form/cekdata/cek.php on line 33
+[23-Aug-2016 16:12:36 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ypiisema/public_html/supervisi/form/cekdata/cek.php on line 197
+[23-Aug-2016 16:12:41 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/ypiisema/public_html/supervisi/form/cekdata/cek.php on line 33
+[23-Aug-2016 16:12:41 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ypiisema/public_html/supervisi/form/cekdata/cek.php on line 197
+[23-Aug-2016 16:13:14 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/ypiisema/public_html/supervisi/form/cekdata/cek.php on line 33
+[23-Aug-2016 16:13:14 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ypiisema/public_html/supervisi/form/cekdata/cek.php on line 197
+[23-Aug-2016 16:14:31 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/ypiisema/public_html/supervisi/form/cekdata/cek.php on line 33
+[23-Aug-2016 16:14:31 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ypiisema/public_html/supervisi/form/cekdata/cek.php on line 197
+[23-Aug-2016 16:14:56 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/ypiisema/public_html/supervisi/form/cekdata/cek.php on line 33
+[23-Aug-2016 16:14:56 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ypiisema/public_html/supervisi/form/cekdata/cek.php on line 197
+[23-Aug-2016 16:15:02 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/ypiisema/public_html/supervisi/form/cekdata/cek.php on line 33
+[23-Aug-2016 16:15:02 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ypiisema/public_html/supervisi/form/cekdata/cek.php on line 197
+[23-Aug-2016 16:16:25 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/ypiisema/public_html/supervisi/form/cekdata/cek.php on line 196
+[23-Aug-2016 16:16:25 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ypiisema/public_html/supervisi/form/cekdata/cek.php on line 197
+[23-Aug-2016 16:17:09 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/ypiisema/public_html/supervisi/form/cekdata/cek.php on line 196
+[23-Aug-2016 16:17:09 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ypiisema/public_html/supervisi/form/cekdata/cek.php on line 197
+[23-Aug-2016 16:17:48 UTC] PHP Warning:  include(koneksi.php): failed to open stream: No such file or directory in /home/ypiisema/public_html/supervisi/form/cekdata/cek.php on line 2
+[23-Aug-2016 16:17:48 UTC] PHP Warning:  include(koneksi.php): failed to open stream: No such file or directory in /home/ypiisema/public_html/supervisi/form/cekdata/cek.php on line 2
+[23-Aug-2016 16:17:48 UTC] PHP Warning:  include(): Failed opening 'koneksi.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/ypiisema/public_html/supervisi/form/cekdata/cek.php on line 2
+[23-Aug-2016 16:17:48 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/ypiisema/public_html/supervisi/form/cekdata/cek.php on line 197
+[23-Aug-2016 16:17:48 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ypiisema/public_html/supervisi/form/cekdata/cek.php on line 198
+[23-Aug-2016 16:20:35 UTC] PHP Warning:  include(koneksi.php): failed to open stream: No such file or directory in /home/ypiisema/public_html/supervisi/form/cekdata/cek.php on line 2
+[23-Aug-2016 16:20:35 UTC] PHP Warning:  include(koneksi.php): failed to open stream: No such file or directory in /home/ypiisema/public_html/supervisi/form/cekdata/cek.php on line 2
+[23-Aug-2016 16:20:35 UTC] PHP Warning:  include(): Failed opening 'koneksi.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/ypiisema/public_html/supervisi/form/cekdata/cek.php on line 2
+[23-Aug-2016 16:20:35 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/ypiisema/public_html/supervisi/form/cekdata/cek.php on line 197
+[23-Aug-2016 16:20:35 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ypiisema/public_html/supervisi/form/cekdata/cek.php on line 198
+[23-Aug-2016 16:20:39 UTC] PHP Warning:  include(koneksi.php): failed to open stream: No such file or directory in /home/ypiisema/public_html/supervisi/form/cekdata/cek.php on line 2
+[23-Aug-2016 16:20:39 UTC] PHP Warning:  include(koneksi.php): failed to open stream: No such file or directory in /home/ypiisema/public_html/supervisi/form/cekdata/cek.php on line 2
+[23-Aug-2016 16:20:39 UTC] PHP Warning:  include(): Failed opening 'koneksi.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/ypiisema/public_html/supervisi/form/cekdata/cek.php on line 2
+[23-Aug-2016 16:20:39 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/ypiisema/public_html/supervisi/form/cekdata/cek.php on line 197
+[23-Aug-2016 16:20:39 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ypiisema/public_html/supervisi/form/cekdata/cek.php on line 198
+[23-Aug-2016 16:20:47 UTC] PHP Warning:  include(koneksi.php): failed to open stream: No such file or directory in /home/ypiisema/public_html/supervisi/form/cekdata/cek.php on line 2
+[23-Aug-2016 16:20:47 UTC] PHP Warning:  include(koneksi.php): failed to open stream: No such file or directory in /home/ypiisema/public_html/supervisi/form/cekdata/cek.php on line 2
+[23-Aug-2016 16:20:47 UTC] PHP Warning:  include(): Failed opening 'koneksi.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/ypiisema/public_html/supervisi/form/cekdata/cek.php on line 2
+[23-Aug-2016 16:20:47 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/ypiisema/public_html/supervisi/form/cekdata/cek.php on line 197
+[23-Aug-2016 16:20:47 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ypiisema/public_html/supervisi/form/cekdata/cek.php on line 198
+[15-Sep-2016 17:41:30 UTC] PHP Parse error:  syntax error, unexpected '.' in /home/ypiisema/public_html/supervisi/form/cekdata/cek.php on line 695
+[15-Sep-2016 17:41:33 UTC] PHP Parse error:  syntax error, unexpected '.' in /home/ypiisema/public_html/supervisi/form/cekdata/cek.php on line 695

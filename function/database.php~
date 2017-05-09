@@ -1,0 +1,200 @@
+<?php
+	ini_set('max_execution_time', 0);
+	$dbname = 'aepkd';
+	$dbhost = '127.0.0.1';
+	$dbuser = 'root';
+	$dbpass = '';
+	$dbconn = mysql_connect ($dbhost, $dbuser, $dbpass) or die ('mysql connect failed. ' . mysql_error());
+	mysql_select_db($dbname) or die('cannot select database. ' . mysql_error());
+
+
+	function insertGuru ($nipguru,$guru)
+	{
+		$no=0;
+		$sql= "insert into tblGuru(no,nama,nip) values ('$no','$guru','$nipguru')";
+		$query= mysql_query($sql);
+		echo $query;		
+		return $query;
+	}
+
+	function insertTanggalOddEven($indexuser,$oddeven,$tahunajaran, $waktudatenow)
+	{
+		$indextanggal=0;
+		$sql= "insert into tblTanggalMatkul(indextanggal,no,ganjil,tahunpembelajaran,tanggalinsert) values 			('$indexuser','$oddeven','$tahunajaran','$waktudatenow')";
+		$query= mysql_query($sql);
+			
+		return $query;
+	}
+
+
+	function insertSql1($insertuser,$last ,$oddeven,$tahunajaran, $waktudatenow)
+	{
+		/*echo $insertuser ."<br />";
+		echo $last."<br />";
+		echo $oddeven."<br />";
+		echo $tahunajaran."<br />";
+		echo $waktudatenow."<br />";
+		*/
+		$sql="insert into tblScoreI (no,bobot) values ('$insertuser', $last)";
+		
+		$sql1="insert into tblTanggalMatkul(no,ganjil,tahunpembelajaran,tanggalinsert) values 				       	('$insertuser','$oddeven','$tahunajaran','$waktudatenow') ";
+
+	
+		$mysql= mysql_query($sql1);
+		$query= mysql_query($sql);
+		if ($mysql && $query) 
+		{
+			
+			echo "<script type='text/javascript'> alert('data Berhasil di insert);</script>";
+			header("refresh: 0; url='../kd/insertAep2.php?kode=$insertuser'");
+		}
+		else
+		{
+			echo "data failed";		
+		echo "<script type='text/javascript'> alert('data gagal di insert);</script>";
+		}
+		return $mysql;
+
+	}
+
+	
+	function insertSql2($indexuser,$last)
+	{
+		
+		$sql="insert into tblScoreII (no,bobot) values ('$indexuser', $last)";
+		$mysql= mysql_query($sql);
+		if ($mysql) 
+		{
+			echo "<script type='text/javascript'> alert('data Berhasil di insert);</script>";
+			header("refresh: 0; url='../kd/insertAep3.php?kode=$indexuser'");
+		}
+		else
+		{
+			echo "<script type='text/javascript'> alert('data gagal di insert);</script>";
+		}
+		return $mysql;
+
+	}
+
+
+
+	function insertSql3($insertuser,$count)
+	{
+		echo $insertuser;
+		
+		echo $count;
+		$sql="insert into tblScoreIII (no,bobot3) values ('$insertuser', '$count')";
+		echo $sql;
+		$mysql= mysql_query($sql);
+		if ($mysql) 
+		{
+			echo "<script type='text/javascript'> alert('data Berhasil di insert);</script>";
+			header("refresh: 0; url='../kd/insertAep4.php?kode=$insertuser'");
+		}
+		else
+		{
+			echo "failed";
+			echo "<script type='text/javascript'> alert('data gagal di insert);</script>";
+		}
+		return $mysql;
+
+	}
+
+	
+
+	function insertSql4($index,$sumtotal)
+	{
+	
+		
+		
+		$sql="insert into tblScoreIV (no,bobot4) values ('$index', '$sumtotal')";
+		echo $sql;
+		$mysql= mysql_query($sql);
+		if ($mysql) 
+		{
+			echo "<script type='text/javascript'> alert('data Berhasil di insert);</script>";
+			header("refresh: 0; url='../kd/insertAep5.php?kode=$index'");
+		}
+		else
+		{
+			echo "failed";
+			echo "<script type='text/javascript'> alert('data gagal di insert);</script>";
+		}
+		return $mysql;
+
+	}
+
+
+
+	
+
+	function insertSql5($indexuser,$sumtotal)
+	{
+		$sql="insert into tblScoreV (no,bobot5) values ('$indexuser', '$sumtotal')";
+		echo $sql;
+		$mysql= mysql_query($sql);
+		if ($mysql) 
+		{
+			echo "<script type='text/javascript'> alert('data Berhasil di insert);</script>";
+			header("refresh: 0; url='../kd/insertAep6.php?kode=$indexuser'");
+		}
+		else
+		{
+			echo "failed";
+			echo "<script type='text/javascript'> alert('data gagal di insert);</script>";
+		}
+		return $mysql;
+
+	}
+
+
+	function insertSql6($indexuser,$duapuluhX)
+	{
+		$sql="insert into tblScoreVI (no,bobot6) values ('$indexuser', '$duapuluhX')";
+		echo $sql;
+		$mysql= mysql_query($sql);
+		if ($mysql) 
+		{
+			echo "<script type='text/javascript'> alert('data Berhasil di insert);</script>";
+			header("refresh: 0; url='../kd/index.php?kode=$indexuser'");
+		}
+		else
+		{
+			echo "failed";
+			echo "<script type='text/javascript'> alert('data gagal di insert);</script>";
+		}
+		return $mysql;
+
+	}
+
+
+	function cariUser($carinama)
+	{
+		$sql= "SELECT DISTINCT tblGuru.nama, tblTanggalMatkul.ganjil, tblGuru.nip, tblScoreI.bobot AS bobot1, tblScoreII.bobot AS bobot2, tblScoreIII.bobot3, tblScoreIV.bobot4, tblScoreV.bobot5, tblScoreVI.bobot6, tblTanggalMatkul.tahunpembelajaran, tblTanggalMatkul.ganjil, tblTanggalMatkul.tanggalinsert, (
+		tblScoreI.bobot + tblScoreII.bobot + tblScoreIII.bobot3 + tblScoreIV.bobot4 + tblScoreV.bobot5 + tblScoreVI.bobot6
+		) AS  'sum'
+		FROM tblGuru
+		INNER JOIN tblTanggalMatkul
+		USING ( no ) 
+		INNER JOIN tblScoreI
+		USING ( no ) 
+		INNER JOIN tblScoreII
+		USING ( no ) 
+		INNER JOIN tblScoreIII
+		USING ( no ) 
+		INNER JOIN tblScoreIV
+		USING ( no ) 
+		INNER JOIN tblScoreV
+		USING ( no ) 
+		INNER JOIN tblScoreVI
+		USING ( no ) 
+		WHERE tblGuru.nama LIKE  '%$carinama%'
+		LIMIT 0 , 30";
+		$query=mysql_query($sql);
+	
+		return $query;
+
+	}
+?>
+
+

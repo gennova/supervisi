@@ -1,0 +1,101 @@
+<?php
+	ini_set('max_execution_time', 0);
+	$dbname = 'aepkd';
+	$dbhost = '127.0.0.1';
+	$dbuser = 'root';
+	$dbpass = '';
+	$dbconn = mysql_connect ($dbhost, $dbuser, $dbpass) or die ('mysql connect failed. ' . mysql_error());
+	mysql_select_db($dbname) or die('cannot select database. ' . mysql_error());
+
+
+	function showGuru()
+	{
+		$sql= "select no,nip,nama from tblGuru";
+		$query=mysql_query($sql);
+		return $query;
+
+	}
+
+
+	function showAEP()
+	{
+		$sql="SELECT DISTINCT tblGuru.nama, tblTanggalMatkul.ganjil, tblGuru.nip, tblScoreI.bobot AS bobot1, 			tblScoreII.bobot AS bobot2, 
+		tblScoreIII.bobot3,
+		tblScoreIV.bobot4, 
+		tblScoreV.bobot5, 
+		tblScoreVI.bobot6, 
+		tblTanggalMatkul.tahunpembelajaran,
+		tblTanggalMatkul.ganjil,
+		tblTanggalMatkul.tanggalinsert , 
+
+		(tblScoreI.bobot + tblScoreII.bobot+tblScoreIII.bobot3 +tblScoreIV.bobot4+tblScoreV.bobot5 + tblScoreVI.bobot6) as 'sum'
+		
+
+		FROM tblGuru
+		INNER JOIN tblTanggalMatkul
+		USING ( no ) 
+		INNER JOIN tblScoreI
+		USING ( no ) 
+		INNER JOIN tblScoreII
+		USING ( no ) 
+		INNER JOIN tblScoreIII
+		USING ( no ) 
+		INNER JOIN tblScoreIV
+		USING ( no ) 
+		INNER JOIN tblScoreV
+		USING ( no ) 
+		INNER JOIN tblScoreVI
+		USING ( no ) 
+		LIMIT 0 , 30
+		";
+		$query=mysql_query($sql);
+		if ($query) 
+    		{		
+
+		while ($row = mysql_fetch_array($query)) 
+		{
+			
+		
+                    		echo "<tr>";
+					echo "<td>".$row['nip']."</td>";
+					echo "<td>".$row['nama']."</td>";
+					echo "<td>".$row['bobot1']."</td>";
+
+					echo "<td>".$row['bobot2']."</td>";
+					echo "<td>".$row['bobot3']."</td>";
+					echo "<td>".$row['bobot4']."</td>";
+					echo "<td>".$row['bobot5']."</td>";
+					echo "<td>".$row['bobot6']."</td>";
+					echo "<td>".$row['sum']." %</td>";
+					echo "<td>".$row['ganjil']."</td>";	
+					echo "<td>".$row['tahunpembelajaran']."</td>";
+					echo "<td>".$row['tanggalinsert']."</td>";
+
+                       	/*
+                        echo"<td>"."<a href='./formUpdateGuru.php?kode=".$row['0']."'>Edit Data </a></td>";
+                        echo"<td>"."<a href='./formeditPembayaran.php?kode=".$row['0']."'>Delete </a></td>";
+			*/
+                  		 echo "</tr>";
+			
+				
+		}
+	}
+
+
+		return $query;	
+	}
+
+	function showGuruUpdate($new)
+	{
+		$sql= "select no,nip,nama from tblGuru where $new";
+
+		$new= mysql_query($sql);
+		$query=mysql_fetch_array($new);
+		return $query;
+
+	}
+
+        
+    
+?>
+

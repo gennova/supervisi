@@ -1,0 +1,23 @@
+<?php
+include ('./database.php');
+
+$value1= $_GET['satu'];
+$value2 = $_GET['duasub1'];
+$value3= $_GET['duasub2'];
+$indexuser=$_GET['variableuser'];
+if ($value1 == null)
+{
+	$value1 = 0;
+}
+global $bobot;
+
+foreach ($value1 as $key => $valuev)
+{
+	$bobot = $valuev * 1;
+}
+$last = $bobot+ $value2 + $value3;
+$new= insertSql1 ($indexuser,$last);
+
+
+
+?>

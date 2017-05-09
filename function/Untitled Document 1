@@ -1,0 +1,5 @@
+start mysql 
+/opt/lampp/lampp/start
+/etc/init.d/mysql/stop
+sudo service mysql stop
+/opt/lampp/lampp/start

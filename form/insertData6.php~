@@ -1,0 +1,7 @@
+<?php
+$indexuser=$_GET['indexuser'];
+
+$duapuluhX=$_GET['duapuluh'];
+
+$new = insertSql6($indexuser, $duapuluhX);
+?>
