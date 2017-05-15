@@ -1630,8 +1630,8 @@ $d=date("Y-m-d H:i:s");
       </td>     
     </tr>
         <tr>
-            <td rowspan="1"> 23 </td>
-      <td>Semester</td>    
+            <td rowspan="1"> 24 </td>
+      <td>Tahun Pelajaran</td>    
       <td class="td">  
   <select name="ajarannya">
   <option value="2015/2016">2015/2016</option>
