@@ -1,5 +1,5 @@
 <?php
-include('../koneksi.php');
+$con=new mysqli("localhost", "u5621566_supervisi", "Semarang2020!", "u5621566_supervisi");  
 $idgurunya = $_GET['kode'];
 $no1=$_GET['no1'];
 $no2a=$_GET['no2a'];
