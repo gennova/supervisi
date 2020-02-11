@@ -45,8 +45,8 @@ session_start();
     margin: 0;
     padding: 0;
   }
+
   #menu li {
-    list-style-type: none;
     padding-bottom: 10px;
     border-bottom: 1px solid #fff499;
   }
@@ -112,7 +112,7 @@ var defaults = {
   spoilerButtonClickMaxY: 24,
   slideEffect: true
 };
-.tree-menu ul { list-style: none; }
+.tree-menu ul { list-style: none; list-style-type: none; }
 .tree-menu > ul { padding: 0; }
 .tree-menu a {
   display: block;
