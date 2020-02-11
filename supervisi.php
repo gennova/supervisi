@@ -184,7 +184,7 @@ tr:nth-child(even){background-color: #f2f2f2}
   <div id="kiri" >
    <h3>Menu Utama</h3>
 	<div class="tree-menu demo" id="tree-menu">
-	  <ul>
+	  <ul style="ul {list-style-type: none; }">
 	    <li><a href="data.php?idunit=<?php echo $idunits; ?>">HOME</a></li>
 		<li><a href="nilai.php">NILAI SUPERVISI</a></li>	
 		<li><a href="#">SINKRONISASI</a></li>	
