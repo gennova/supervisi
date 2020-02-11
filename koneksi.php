@@ -1,3 +1,3 @@
 <?php  
-    $con=new mysqli("localhost", "root", "", "ypiisema_supervisi");  
+    $con=new mysqli("localhost", "u5621566_supervisi", "Semarang2020!", "u5621566_supervisi");  
 ?>
