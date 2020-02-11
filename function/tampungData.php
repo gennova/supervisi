@@ -67,6 +67,6 @@ echo "<br />";
 echo 'Index User '.$index;
 echo "<br />";
 echo 'Tanggal '.$waktudatenow;
-$new=insertAllData($index,$bab1,$bab2,$bab3,$bab4,$bab5,$bab6,$oddeven,$tahun,$waktudatenow ,$a,$supervisor,$komennya);
+$new=insertAllData($index,$bab1,$bab2,$bab3,$bab4,$bab5,$bab6,$oddeven,$tahun,$waktudatenow,$a,$supervisor,$komennya);
 
 ?>

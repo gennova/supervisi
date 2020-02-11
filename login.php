@@ -1,17 +1,16 @@
 <?php
 	ob_start();
     session_start();
-	mysql_connect("localhost","root","");
-    mysql_select_db("ypiisema_supervisi");
+    $mysqli = new mysqli("localhost", "root", "", "ypiisema_supervisi");
     $myusername=$_POST['usernamenya'];
     $mypassword=$_POST['pass'];
 	$mylevel='';
     $mysql = "SELECT * FROM usernya JOIN unit ON usernya.level=unit.idunit WHERE username='$myusername' and password='$mypassword'";
-    $result = mysql_query($mysql) or die("cannot execute query");
-    $count = mysql_num_rows($result);
+    $result = mysqli_query($mysqli,$mysql) or die("cannot execute query");
+    $count = mysqli_num_rows($result);
 	if($count==1)
     {
-	  while($row = mysql_fetch_array($result)) {	  
+	  while($row = mysqli_fetch_array($result)) {	  
       $leveluser = $row['level'];
 	  $iduser = $row['id'];
 	  $idunit = $row['idunit'];

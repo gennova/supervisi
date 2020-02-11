@@ -18,6 +18,6 @@ function redirect($url)
     }
 }
 $namaunit   = $_POST['nunit'];
-mysql_query("INSERT INTO unit (namaunit) VALUES('$namaunit')") or die(mysql_error());
+mysqli_query($con,"INSERT INTO unit (namaunit) VALUES('$namaunit')") or die(mysql_error());
 redirect("halamanadmin.php")
 ?>

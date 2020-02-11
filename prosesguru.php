@@ -19,6 +19,6 @@ function redirect($url)
 }
 $idunit   = $_POST['unitnya'];
 $namaguru   = $_POST['nguru'];
-mysql_query("INSERT INTO guru (namaguru,unit) VALUES('$namaguru','$idunit')") or die(mysql_error());
+mysqli_query($con,"INSERT INTO guru (namaguru,unit) VALUES('$namaguru','$idunit')") or die(mysql_error());
 redirect("halamanadmin.php")
 ?>

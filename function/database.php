@@ -1,14 +1,6 @@
 <?php
-	ini_set('max_execution_time', 0);
-	$dbname = 'ypiisema_supervisi';
-	$dbhost = 'localhost';
-	$dbuser = 'root';
-	$dbpass = '';
-
-	$dbconn = mysql_connect ($dbhost, $dbuser, $dbpass) or die ('mysql connect failed. ' . mysql_error());
-
-	mysql_select_db($dbname) or die('cannot select database. ' . mysql_error());
-
+include ('../koneksi.php');
+	ini_set('max_execution_time', 0);	
 	function generateRandStr($length){
       $randstr = "";
       for($i=0; $i<$length; $i++){
@@ -24,37 +16,7 @@
       return $randstr;
    } 
    
-	function after ($this, $inthat)
-	{
-	if (!is_bool(strpos($inthat, $this)))
-	return substr($inthat, strpos($inthat,$this)+strlen($this));
-	};
-
-	function after_last ($this, $inthat)
-	{
-	if (!is_bool(strrevpos($inthat, $this)))
-	return substr($inthat, strrevpos($inthat, $this)+strlen($this));
-	};
-
-	function before ($this, $inthat)
-	{
-	return substr($inthat, 0, strpos($inthat, $this));
-	};
-
-	function before_last ($this, $inthat)
-	{
-	return substr($inthat, 0, strrevpos($inthat, $this));
-	};
-
-	function between ($this, $that, $inthat)
-	{
-	return before ($that, after($this, $inthat));
-	};
-
-	function between_last ($this, $that, $inthat)
-	{
-	return after_last($this, before_last($that, $inthat));
-	};
+	
 
 	function loginError()
 	{
@@ -65,6 +27,7 @@
 	
 	function insertAllData($index,$bab1,$bab2,$bab3,$bab4,$bab5,$bab6,$oddeven,$tahun,$waktudatenow,$a,$spv,$komet)
 	{
+		include ('../koneksi.php');
 		/* $sqltgl="insert into tblTanggalMatkul(no,ganjil,tahunpembelajaran,tanggalinsert) values ('$index','$oddeven','$tahun','$waktudatenow') "; */
 		$uniksupervisor = generateRandStr(10);
 		
@@ -80,18 +43,17 @@
 			
 		$sql6="insert into tblscorevi (no,bobot6) values ('$index', '$bab6')";
 		
-		$insertuser= "insert into tblrincianisian (no,baba,babb,babc,babd,babe,babf,semester,tahunajaran,dateinsert,supervisor,komen,idsuprandom) values ('$index' ,'$bab1','$bab2','$bab3' ,'$bab4','$bab5','$bab6','$oddeven','$tahun','$waktudatenow','$spv','$komet','$uniksupervisor')";		
-		
-		mysql_query($sql1) or die(mysql_error());
-		mysql_query($sql2) or die(mysql_error());
-		mysql_query($sql3) or die(mysql_error());
-		mysql_query($sql4) or die(mysql_error());
-		mysql_query($sql5) or die(mysql_error());
-		mysql_query($sql6) or die(mysql_error());		
-		mysql_query($insertuser) or die(mysql_error());
-		$result = mysql_query("select max(norincian) as 'data' from tblrincianisian") or die(mysql_error());			
+		$insertuser= "insert into tblrincianisian (no,baba,babb,babc,babd,babe,babf,semester,tahunajaran,dateinsert,supervisor,komen,idsuprandom) values ('$index' ,'$bab1','$bab2','$bab3' ,'$bab4','$bab5','$bab6','$oddeven','$tahun','$waktudatenow','$spv','$komet','$uniksupervisor')";
+		mysqli_query($con,$sql1) or die(mysql_error());
+		mysqli_query($con,$sql2) or die(mysql_error());
+		mysqli_query($con,$sql3) or die(mysql_error());
+		mysqli_query($con,$sql4) or die(mysql_error());
+		mysqli_query($con,$sql5) or die(mysql_error());
+		mysqli_query($con,$sql6) or die(mysql_error());		
+		mysqli_query($con,$insertuser) or die(mysql_error());
+		$result = mysqli_query($con, "select max(norincian) as 'data' from tblrincianisian") or die(mysql_error());			
 		$idrincian=0;		
-		while($row = mysql_fetch_array($result)) {
+		while($row = mysqli_fetch_array($result)) {
                         $idrincian = $row['data'];                        
                     }
 		if (is_array($a))
@@ -102,7 +64,7 @@
 				$nomor=$row;
 				$nilai=$values;
 				$sql= "insert into tblinsertrincian (nourutanrincian,indexuser,nomor,nilai,idsuprandom,tahunajaran,semester) values ($idrincian,'$index','$row',$values,'$uniksupervisor','$tahun','$oddeven')";				
-				$queryx=mysql_query($sql);	
+				$queryx=mysqli_query($con,$sql);	
 				
 				if ($queryx)
 				{

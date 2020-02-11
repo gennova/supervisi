@@ -330,8 +330,7 @@ if ($bab1 <= 12 and $bab1 >= 7)
 				<tr>
 				<td align='center'><?php echo $no1+$no2a+$no2b ?></td><td><?php echo $bab1temp ?></td>
 				<td align='center'><?php echo $no3+$no4 ?></td><td><?php echo $bab2temp ?></td>
-				<td align='center'><?php echo $no5a+$no5b+$no6+$no7+$no8a+$no8b
-			+$no9a+$no9b+$no10a+$no10b+$no10c+$no11+$no12+$no13+$no14a+$no14b+$no14c+$no14d ?></td><td><?php echo $bab3temp ?></td>
+				<td align='center'><?php echo $no5a+$no5b+$no6+$no7+$no8a+$no8b+$no9a+$no9b+$no10a+$no10b+$no10c+$no11+$no12+$no13+$no14a+$no14b+$no14c+$no14d ?></td><td><?php echo $bab3temp ?></td>
 				<td align='center'><?php echo (($no15a+$no15b)/2)+$no16 ?></td><td><?php echo $bab4temp ?></td>
 				<td align='center'><?php echo $no17+$no18+$no19 ?></td><td><?php echo $bab5temp ?></td>
 				<td align='center'><?php echo $duapuluhX ?></td><td><?php echo $bab6temp ?></td>

@@ -482,7 +482,7 @@ $bab6=$duapuluhX;
 			{
 				$bab1temp="Baik ";
 			}
-			else if ($bab1 >= 4 && $bab1 < 7)
+			else if ($bab1 >= 4 & $bab1 < 7)
 			{
 				$bab1temp="Sedang";
 			}
@@ -495,7 +495,7 @@ $bab6=$duapuluhX;
 			{
 				$bab2temp="Baik ";
 			}
-			else if ($bab2 >= 2 && $bab2 < 6)
+			else if ($bab2 >= 2 & $bab2 < 6)
 			{
 				$bab2temp="Sedang";
 			}
@@ -504,11 +504,11 @@ $bab6=$duapuluhX;
 				$bab2temp="Kurang";
 			}		
 
-			if ($bab3 <= 60 && $bab3 >= 40)
+			if ($bab3 <= 60 & $bab3 >= 40)
 			{
 				$bab3temp="Baik ";
 			}
-			else if ($bab3 >= 20 && $bab3 < 40)
+			else if ($bab3 >= 20 & $bab3 < 40)
 			{
 				$bab3temp="Sedang";
 			}
@@ -516,11 +516,11 @@ $bab6=$duapuluhX;
 			{
 				$bab3temp="Kurang";
 			}
-			if ($bab4 <= 8 && $bab4 >= 5)
+			if ($bab4 <= 8 & $bab4 >= 5)
 			{
 				$bab4temp="Baik ";
 			}
-			else if ($bab4 >= 2 && $bab4 < 5)
+			else if ($bab4 >= 2 & $bab4 < 5)
 			{
 				$bab4temp="Sedang";
 			}
@@ -532,7 +532,7 @@ $bab6=$duapuluhX;
 			{
 				$bab5temp="Baik ";
 			}
-			else if ($bab5 >= 2 && $bab5 < 6)
+			else if ($bab5 >= 2 & $bab5 < 6)
 			{
 				$bab5temp="Sedang";
 			}
@@ -545,7 +545,7 @@ $bab6=$duapuluhX;
 			{
 				$bab6temp="Baik ";
 			}
-			else if ($bab6 >= 6 && $bab6 < 3)
+			else if ($bab6 >= 6 & $bab6 < 3)
 			{
 				$bab6temp="Sedang";
 			}
@@ -559,7 +559,7 @@ $bab6=$duapuluhX;
 			{
 				$bab6temp="Baik ";
 			}
-			else if ($bab6 > 2 && $bab6 <= 3)
+			else if ($bab6 > 2 & $bab6 <= 3)
 			{
 				$bab6temp="Sedang";
 			}
@@ -666,7 +666,7 @@ if ($fetchguru);
 </tr> 
 <?php 
 
-echo"<td>"."<a href='./cekdata/cek.php?kode=$indexuser && && no1=$no1 && no2a=$no2a && no2b=$no2b && no3=$x && no4=$x2 && no5a=$limasuba && no5b=$limasubb && no6=$enamx && no7=$hasiltujuh && no8a=$hasildelapanI && no8b= $hasildelapanII && no9a=$hasilsembilanI && no9b=$hasilsembilanII && no10a=$hasilsepuluhI && no10b=$sepuluhb && no10c=$sepuluhc && no11= $hasilsebelas && no12= $duabelas && no13= $hasiltigabelas && no14a=$hasilempatbelasI && no14b=$hasilempatbelasII && no14c=$hasilempatbelasIII && no14d=$hasilempatbelasIV && no15a=$limabelasI && no15b=$limabelasII && no16=$enambelas && no17=$tujuhbelasnew && no18=$delapanbelasnew && no19=$sembilanbelasnew && no20=$duapuluhX && bab1=$bab1 && bab2=$bab2 && bab3=$bab3 && bab4=$bab4 && bab5=$bab5 && bab6=$bab6 && ganjilgenap=$oddeven && tahun=$tahunajaran && waktusekarang=$waktudatenow && komennya=$komennya && supervisornya=$supervisor'>Detail Penilaian</a></td>";
+echo"<td>"."<a href='./cekdata/cek.php?kode=$indexuser&no1=$no1&no2a=$no2a&no2b=$no2b&no3=$x&no4=$x2&no5a=$limasuba&no5b=$limasubb&no6=$enamx&no7=$hasiltujuh&no8a=$hasildelapanI&no8b=$hasildelapanII&no9a=$hasilsembilanI&no9b=$hasilsembilanII&no10a=$hasilsepuluhI&no10b=$sepuluhb&no10c=$sepuluhc&no11=$hasilsebelas&no12=$duabelas&no13=$hasiltigabelas& no14a=$hasilempatbelasI&no14b=$hasilempatbelasII&no14c=$hasilempatbelasIII&no14d=$hasilempatbelasIV&no15a=$limabelasI&no15b=$limabelasII&no16=$enambelas&no17=$tujuhbelasnew&no18=$delapanbelasnew&no19=$sembilanbelasnew&no20=$duapuluhX&bab1=$bab1&bab2=$bab2&bab3=$bab3&bab4=$bab4&bab5=$bab5&bab6=$bab6&ganjilgenap=$oddeven&tahun=$tahunajaran&waktusekarang=$waktudatenow&komennya=$komennya&supervisornya=$supervisor'>Detail Penilaian</a></td>";
 
 ?>
 
