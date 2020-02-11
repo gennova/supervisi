@@ -1,7 +1,7 @@
 <?php
 	ob_start();
     session_start();
-    $mysqli = new mysqli("localhost", "root", "", "ypiisema_supervisi");
+    $mysqli = new mysqli("localhost", "u5621566_supervisi", "Semarang2020!", "u5621566_supervisi");
     $myusername=$_POST['usernamenya'];
     $mypassword=$_POST['pass'];
 	$mylevel='';
