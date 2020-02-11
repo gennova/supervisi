@@ -217,7 +217,7 @@ $(document).ready(function() {
                     while($row = mysqli_fetch_array($result2)) {
                 ?>
 <tr><td>Nama</td><td>:</td><td><?php echo $row['namaguru'] ?></td></tr>
-<tr><td>Unit Kerja</td><td>:</td><td><?php echo $row['namaunit'] +$row['alamatunit'] ?></td></tr>
+<tr><td>Unit Kerja</td><td>:</td><td><?php echo $row['namaunit'] ?></td></tr>
 <tr><td>Nama Mapel</td></tr>
 <tr><td>Kelas</td></tr>
 <?php
