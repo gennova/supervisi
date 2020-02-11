@@ -46,6 +46,7 @@ session_start();
     padding: 0;
   }
   #menu li {
+    list-style-type: none;
     padding-bottom: 10px;
     border-bottom: 1px solid #fff499;
   }
