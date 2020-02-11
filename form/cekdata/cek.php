@@ -1,5 +1,5 @@
 <?php
-include('koneksi.php');
+//include('koneksi.php');
 $idgurunya = $_GET['kode'];
 $no1=$_GET['no1'];
 $no2a=$_GET['no2a'];
