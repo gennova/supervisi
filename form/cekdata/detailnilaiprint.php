@@ -216,7 +216,7 @@ $(document).ready(function() {
 	  $result2 = mysqli_query($con,"SELECT * FROM guru JOIN unit ON guru.unit=unit.idunit WHERE guru.id=$idgurunya");
                     while($row = mysqli_fetch_array($result2)) {
                 ?>
-echo $row['alamatunit'];
+<?php echo $row['alamatunit']; ?>
 <tr><td>Nama</td><td>:</td><td><?php echo $row['namaguru'] ?></td></tr>
 <tr><td>Unit Kerja</td><td>:</td><td><?php echo $row['namaunit'] ?></td></tr>
 <tr><td>Nama Mapel</td></tr>
